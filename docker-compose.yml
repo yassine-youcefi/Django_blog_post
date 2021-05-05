@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    container_name: blog
+    build: .
+    ports:
+      - "0.0.0.0:8000:8000"
+    command: bash -c  "python manage.py runserver 0:8000"
+
+    volumes:
+      - .:/code
+    stdin_open: true
+    tty: true

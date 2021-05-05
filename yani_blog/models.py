@@ -8,3 +8,6 @@ class User(models.Model):
     email = models.EmailField(max_length=100)
     age = models.IntegerField(blank=True)
     birthday = models.DateTimeField('date published', null=True)
+
+    def __str__(self):
+        return f'user : {self.username}'
