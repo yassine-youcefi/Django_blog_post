@@ -1,31 +1,18 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout/base.html" %}
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 
-    {%if title%}
-    <title>{{title}}</title>
-    {%else%}
-    <title>Yani blog</title>
-    {%endif%}
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
+{% block content%}
 
-<body>
-    {%for post in posts%}
-    <div>
-        <div>{{post.author}} on : {{post.date_posted}}</div>
-        <div>
-            <h5>{{post.title}}</h5>
-            <p>{{post.content}}</p>
-        </div>
+{%for post in posts%}
+
+<div class="card text-white bg-dark mb-3" style="background-color:#1c857a !important;">
+    <div class="card-header">{{post.author}} on : {{post.date_posted}}</div>
+    <div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
+        <p class="card-text">{{post.content}}</p>
     </div>
-    {%endfor%}
+</div>
 
-</body>
+{%endfor%}
 
-</html>
+{%endblock content%}
