@@ -7,11 +7,8 @@ from .models import Post,User
 
 
 def index(request):
-
-    posts = Post.objects.all()
-    print('this is my posts >> \n',posts)
     context={
-        'posts' : posts,
+        'posts' : Post.objects.all(),
         'title' : 'Home page'
 
     }
