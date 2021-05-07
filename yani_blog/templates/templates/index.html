@@ -6,7 +6,7 @@
 {%for post in posts%}
 
 <div class="card text-white bg-dark mb-3" style="background-color:#0c4b33 !important;">
-    <div class="card-header">{{post.author}} on : {{post.date_post}}</div>
+    <div class="card-header">{{post.author}} on : {{post.date_post|date:"d F Y"}}</div>
     <div class="card-body">
         <h5 class="card-title">{{post.title}}</h5>
         <p class="card-text">{{post.content}}</p>
