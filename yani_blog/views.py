@@ -5,4 +5,9 @@ from .models import User
 
 
 def index(request):
-    return HttpResponse('HI THERE')
+    return render(request, 'templates/index.html')
+
+ 
+def about(request):
+    return render(request, 'templates/about.html')
+ 
