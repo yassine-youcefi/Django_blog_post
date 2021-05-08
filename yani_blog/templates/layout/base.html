@@ -36,6 +36,13 @@
     <main role="main" class="container">
         <div class="row" style="padding-top: 15px;">
             <div class="col-md-8" style="padding-top: 60px;">
+                {% if messages %}
+                {% for message in messages%}
+                <div class="alert alert-{{messages.tags}}">
+                    {{message}}
+                </div>
+                {%endfor%}
+                {%endif%}
                 {% block content %}{% endblock content %}
             </div>
         </div>
