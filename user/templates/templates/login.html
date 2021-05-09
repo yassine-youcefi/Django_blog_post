@@ -4,18 +4,20 @@
     <form action="" method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4"> Sign up Todey</legend>
+            <legend class="border-bottom mb-4"> Login </legend>
+            </br>
             {{ form|crispy }}
         </fieldset>
         <div class="form-group">
             <button class="btn btn-onlige-info" type="submit" style="background-color:#0c4b33; color:#fff">
-                Sign up
+                Login
             </button>
         </div>
+        </br>
     </form>
     <div class="border-top py-3">
         <small class="text-muted">
-            I have An Account !<a href="{% url 'signin'%}" class="ml-2">Login</a>
+            I Don't have An Account yet !<a href="{% url 'sign_up'%}" class="ml-2">Sign up</a>
         </small>
     </div>
 </div>

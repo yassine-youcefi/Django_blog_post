@@ -12,7 +12,7 @@ def sign_up(request):
             username = form.cleaned_data.get('username')
             messages.success(
                 request, f'Account is create successfuly for {username}')
-            return redirect('index')
+            return redirect('login')
     else:
         form = UserRegisterForm()
     return render(request, 'templates/sign_up.html', {'form': form})
