@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import UserRegisterForm
- 
+from django.contrib.auth.decorators import login_required
+
 
 def sign_up(request):
     if request.method == 'POST':
@@ -18,5 +19,6 @@ def sign_up(request):
     return render(request, 'templates/sign_up.html', {'form': form})
 
 
+@login_required
 def profile(request):
-    return render(request, 'templates/profile.html') 
+    return render(request, 'templates/profile.html')
