@@ -1,11 +1,13 @@
 {% extends "layout/base.html" %} {% block content%} {% load crispy_forms_tags %}
-<div class="content-section">
-  <div class="media">
-    <img class="rounded-circle account-img" src="{{user.profile.image.url}}" />
-    <div class="media-body">
-      <h2 class="account-heading">{{user.username}}</h2>
-      <p class="text-secondary">{{user.email}}</p>
-    </div>
+<div class="media">
+  <img
+    class="rounded-circle account-img"
+    width="100 px"
+    src="{{user.profile.image.url}}"
+  />
+  <div class="media-body" style="padding-left: 15px">
+    <h2 class="account-heading">{{user.username}}</h2>
+    <p class="text-secondary">{{user.email}}</p>
   </div>
 </div>
 {%endblock content%}
