@@ -125,4 +125,11 @@ LOGIN_URL = 'login'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# aws configuration ...
+# DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# AWS_ACCESS_KEY_ID = "73829c65840c"
+# AWS_SECRET_ACCESS_KEY = "foobar"
+# AWS_STORAGE_BUCKET_NAME = "demo-bucket"
+# AWS_S3_ENDPOINT_URL = "http://localstack:4566"
+# AWS_S3_CUSTOM_DOMAIN = "http://0.0.0.0:4566/demo-bucket"
+# AWS_DEFAULT_ACL = "public-read"

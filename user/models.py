@@ -9,8 +9,8 @@ class Profile(models.Model):
     GENDER_FEMALE = 1
     GENDER_CHOICES = [(GENDER_MALE, 'Male'), (GENDER_FEMALE, 'Female')]
     gender = models.IntegerField(choices=GENDER_CHOICES)
-    # image = models.ImageField(upload_to='profile_pics', default='default.jpg')
-    image = models.FileField()
+    image = models.ImageField(upload_to='profile_pics', default='default.jpg')
+    # image = models.FileField()
 
     def __str__(self):
         return f'{self.user.username} Profile'
