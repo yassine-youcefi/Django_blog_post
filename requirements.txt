@@ -1,5 +1,5 @@
 asgiref==3.3.4
-Django==4.2.22
+Django==4.2.24
 django-crispy-forms==1.11.2
 Pillow==10.3.0
 pytz==2021.1
